@@ -33,7 +33,7 @@
                     <i data-lucide="store" class="w-5 h-5"></i>
                     Mulai Belanja
                 </a>
-                <a href="https://wa.me/6282268480864" target="_blank" class="inline-flex items-center gap-2.5 border-2 border-white/20 hover:border-white/50 text-white font-semibold px-8 py-4 rounded-2xl transition-all duration-300 text-base hover:bg-white/5">
+                <a href="https://wa.me/6283821102186" target="_blank" class="inline-flex items-center gap-2.5 border-2 border-white/20 hover:border-white/50 text-white font-semibold px-8 py-4 rounded-2xl transition-all duration-300 text-base hover:bg-white/5">
                     <i data-lucide="message-circle" class="w-5 h-5"></i>
                     Pesan via WA
                 </a>
@@ -105,9 +105,9 @@
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             @foreach([
-                ['shield-check','Teknologi Anti-Sangkut','Ujung jarum diasah super halus dengan lapisan mulus, memastikan serat kain hijab tidak akan tertarik atau robek.','bg-amber-50'],
-                ['gem','Bahan Tahan Karat','Dilapisi emas 14k asli atau perak rhodium, warna pin tidak pudar walau terkena keringat atau udara lembap.','bg-sky-50'],
-                ['heart','Aman & Nyaman','Dirancang agar nyaman sepanjang hari, tanpa mengganggu hijab maupun menyakiti penggunanya.','bg-rose-50'],
+                ['shield-check','Teknologi Anti-Sangkut','Ujung jarum dirancang halus untuk meminimalkan risiko serat kain hijab tersangkut.','bg-amber-50'],
+                ['gem','Bahan Tahan Karat','Menggunakan bahan logam pilihan yang tahan karat untuk pemakaian sehari-hari.','bg-sky-50'],
+                ['heart','Aman & Nyaman','Bentuk yang ergonomis agar nyaman digunakan untuk melengkapi aktivitas harian Anda.','bg-rose-50'],
             ] as $i => $f)
             <div class="reveal group p-8 rounded-3xl border border-gray-100 {{ $f[3] }} hover:shadow-xl hover:shadow-[#C5A46B]/10 transition-all duration-400 text-center space-y-5 hover:-translate-y-2" style="transition-delay: {{ $i * 80 }}ms">
                 <div class="mx-auto h-16 w-16 rounded-2xl bg-[#1C1915] flex items-center justify-center group-hover:bg-[#C5A46B] transition-colors duration-300 shadow-lg">
@@ -271,13 +271,190 @@
                         </div>
                     </div>
                 </div>
-            @endforeach
-        </div>
-
-        <div class="mt-16">
+                    <div class="mt-16">
             {{ $products->links() }}
         </div>
     @endif
+</section>
+
+{{-- ══ TENTANG & IDENTITAS USAHA ══ --}}
+<section id="tentang" class="bg-white py-24 px-5 sm:px-8 border-t border-gray-50">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+        <!-- Kiri: Tentang Usaha -->
+        <div class="lg:col-span-7 space-y-6 reveal">
+            <span class="section-eyebrow block">Tentang Usaha</span>
+            <h2 class="font-display text-4xl sm:text-5xl font-semibold italic text-[#1C1915] leading-tight">
+                Pin hijab cantik untuk tampilan rapi dan elegan
+            </h2>
+            <div class="space-y-4 text-[#6B5E52] text-base leading-relaxed">
+                <p>
+                    <strong>Hijab Pin House</strong> adalah usaha yang menyediakan berbagai pilihan pin hijab dan bros hijab dengan desain cantik, elegan, serta mudah digunakan. Produk ini ditujukan untuk konsumen yang ingin tampil rapi, anggun, dan percaya diri saat menggunakan hijab.
+                </p>
+                <p>
+                    <strong>Makna usaha:</strong> "Hijab Pin House" bermakna rumah pilihan aksesori hijab yang menyediakan pin hijab berkualitas untuk membantu memperindah tampilan hijab.
+                </p>
+                <p>
+                    <strong>Moto:</strong> Cantik, elegan, dan nyaman untuk setiap hijabmu.
+                </p>
+            </div>
+        </div>
+        
+        <!-- Kanan: Identitas Usaha Card -->
+        <div class="lg:col-span-5 reveal">
+            <div class="bg-[#FAF6F0] rounded-3xl p-8 border border-[#E8D5B0]/30 shadow-md">
+                <h3 class="font-display text-2xl font-semibold italic text-[#1C1915] mb-6 pb-3 border-b border-[#E8D5B0]/40">Identitas Usaha</h3>
+                <div class="space-y-4 text-sm">
+                    <div class="flex justify-between py-2 border-b border-[#E8D5B0]/20">
+                        <span class="text-[#6B5E52] font-medium">Nama Usaha</span>
+                        <span class="text-[#1C1915] font-semibold text-right">Hijab Pin House</span>
+                    </div>
+                    <div class="flex justify-between py-2 border-b border-[#E8D5B0]/20">
+                        <span class="text-[#6B5E52] font-medium">Pengelola</span>
+                        <span class="text-[#1C1915] font-semibold text-right">Meri Purnama Sari</span>
+                    </div>
+                    <div class="flex justify-between py-2 border-b border-[#E8D5B0]/20">
+                        <span class="text-[#6B5E52] font-medium">NIB</span>
+                        <span class="text-[#1C1915] font-semibold text-right">0406260106079</span>
+                    </div>
+                    <div class="flex justify-between py-2 border-b border-[#E8D5B0]/20">
+                        <span class="text-[#6B5E52] font-medium">WhatsApp</span>
+                        <a href="https://wa.me/6283821102186" class="text-[#C5A46B] hover:underline font-semibold text-right">0838-2110-2186</a>
+                    </div>
+                    <div class="flex justify-between py-2 border-b border-[#E8D5B0]/20">
+                        <span class="text-[#6B5E52] font-medium">Email</span>
+                        <span class="text-[#1C1915] font-semibold text-right">hijabpinhouse@gmail.com</span>
+                    </div>
+                    <div class="flex justify-between py-2 border-b border-[#E8D5B0]/20">
+                        <span class="text-[#6B5E52] font-medium">Instagram</span>
+                        <a href="https://instagram.com/hijab_pin_house" target="_blank" class="text-[#C5A46B] hover:underline font-semibold text-right">@hijab_pin_house</a>
+                    </div>
+                    <div class="flex flex-col py-2 gap-1.5">
+                        <span class="text-[#6B5E52] font-medium">Alamat</span>
+                        <span class="text-[#1C1915] font-semibold text-sm leading-relaxed">Perumahan Taman Anugerah, Blok G7, Balai Gadang, Kec. Koto Tangah</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{-- ══ POLICY USAHA ══ --}}
+<section id="policy" class="bg-[#FAF6F0] py-24 px-5 sm:px-8 border-t border-gray-150/30">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+            <span class="section-eyebrow block mb-4">Policy Usaha</span>
+            <h2 class="section-heading">Aturan Pemesanan & Layanan</h2>
+            <p class="section-subtext mt-4">Kami berkomitmen memberikan pelayanan terbaik demi kenyamanan belanja Anda.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="reveal p-8 rounded-3xl border border-gray-100 bg-white shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 space-y-4">
+                <div class="h-12 w-12 rounded-2xl bg-[#C5A46B]/10 flex items-center justify-center">
+                    <i data-lucide="clipboard-list" class="w-6 h-6 text-[#C5A46B]"></i>
+                </div>
+                <h3 class="font-display text-2xl font-semibold italic text-[#1C1915]">Aturan Pemesanan</h3>
+                <p class="text-[#6B5E52] text-sm leading-relaxed">
+                    Pemesanan produk kami dapat dilakukan secara praktis melalui website ini atau via WhatsApp. Pastikan nama produk, jumlah, dan alamat pengiriman sudah sesuai sebelum dikonfirmasi.
+                </p>
+            </div>
+            
+            <div class="reveal p-8 rounded-3xl border border-gray-100 bg-white shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 space-y-4" style="transition-delay: 80ms">
+                <div class="h-12 w-12 rounded-2xl bg-amber-50 flex items-center justify-center">
+                    <i data-lucide="refresh-cw" class="w-6 h-6 text-amber-500"></i>
+                </div>
+                <h3 class="font-display text-2xl font-semibold italic text-[#1C1915]">Return Produk</h3>
+                <p class="text-[#6B5E52] text-sm leading-relaxed">
+                    Pengembalian dapat diajukan apabila produk yang diterima mengalami cacat atau rusak. Pembeli wajib menyertakan bukti foto atau video unboxing paket saat pertama kali dibuka.
+                </p>
+            </div>
+
+            <div class="reveal p-8 rounded-3xl border border-gray-100 bg-white shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 space-y-4" style="transition-delay: 160ms">
+                <div class="h-12 w-12 rounded-2xl bg-rose-50 flex items-center justify-center">
+                    <i data-lucide="heart-handshake" class="w-6 h-6 text-rose-500"></i>
+                </div>
+                <h3 class="font-display text-2xl font-semibold italic text-[#1C1915]">Layanan Tanggapan</h3>
+                <p class="text-[#6B5E52] text-sm leading-relaxed">
+                    Setiap keluhan, masukan, maupun pertanyaan dari pembeli akan dilayani dengan ramah dan cepat melalui chat WhatsApp admin selama jam operasional kerja.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{-- ══ LOKASI & KONTAK ══ --}}
+<section id="kontak" class="bg-white py-24 px-5 sm:px-8 border-t border-gray-150/30">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+            <span class="section-eyebrow block mb-4">Lokasi & Kontak</span>
+            <h2 class="section-heading">Hubungi Hijab Pin House</h2>
+            <p class="section-subtext mt-4">Silakan hubungi kami untuk pemesanan, ketersediaan stok, atau info kemitraan.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
+            <!-- Kiri: Kontak Usaha -->
+            <div class="lg:col-span-5 reveal flex flex-col justify-between gap-6">
+                <div class="bg-[#FAF6F0] rounded-3xl p-8 border border-[#E8D5B0]/30 shadow-sm space-y-6 flex-grow">
+                    <h3 class="font-display text-2xl font-semibold italic text-[#1C1915] mb-4">Kontak Usaha</h3>
+                    
+                    <div class="flex items-start gap-4">
+                        <div class="h-10 w-10 rounded-xl bg-[#C5A46B]/10 flex items-center justify-center shrink-0">
+                            <i data-lucide="message-square" class="w-5 h-5 text-[#C5A46B]"></i>
+                        </div>
+                        <div>
+                            <span class="block text-xs font-bold uppercase tracking-widest text-[#6B5E52]/60 mb-0.5">WhatsApp</span>
+                            <a href="https://wa.me/6283821102186" target="_blank" class="text-base font-semibold text-[#1C1915] hover:text-[#C5A46B] transition-colors">0838-2110-2186</a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="h-10 w-10 rounded-xl bg-[#C5A46B]/10 flex items-center justify-center shrink-0">
+                            <i data-lucide="mail" class="w-5 h-5 text-[#C5A46B]"></i>
+                        </div>
+                        <div>
+                            <span class="block text-xs font-bold uppercase tracking-widest text-[#6B5E52]/60 mb-0.5">Email</span>
+                            <a href="mailto:hijabpinhouse@gmail.com" class="text-base font-semibold text-[#1C1915] hover:text-[#C5A46B] transition-colors">hijabpinhouse@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="h-10 w-10 rounded-xl bg-[#C5A46B]/10 flex items-center justify-center shrink-0">
+                            <i data-lucide="instagram" class="w-5 h-5 text-[#C5A46B]"></i>
+                        </div>
+                        <div>
+                            <span class="block text-xs font-bold uppercase tracking-widest text-[#6B5E52]/60 mb-0.5">Instagram</span>
+                            <a href="https://instagram.com/hijab_pin_house" target="_blank" class="text-base font-semibold text-[#1C1915] hover:text-[#C5A46B] transition-colors">@hijab_pin_house</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kanan: Alamat Offline & Maps -->
+            <div class="lg:col-span-7 reveal flex flex-col gap-6">
+                <div class="bg-[#FAF6F0] rounded-3xl p-8 border border-[#E8D5B0]/30 shadow-sm flex flex-col h-full gap-6">
+                    <div class="space-y-2">
+                        <h3 class="font-display text-2xl font-semibold italic text-[#1C1915]">Alamat Offline</h3>
+                        <p class="text-[#6B5E52] text-sm leading-relaxed flex items-start gap-2">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-[#C5A46B] mt-0.5 shrink-0"></i>
+                            <span>Perumahan Taman Anugerah, Blok G7, Balai Gadang, Kec. Koto Tangah, Kota Padang, Sumatera Barat.</span>
+                        </p>
+                    </div>
+                    
+                    <!-- Embedded Google Maps -->
+                    <div class="flex-grow aspect-video lg:aspect-auto min-h-[250px] rounded-2xl overflow-hidden border border-[#E8D5B0]/40 bg-white shadow-inner">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.3789467683935!2d100.38048227496515!3d-0.850438999141443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2fd2be0ab3317769%3A0xe5a3637f9ef82c2c!2sPerumahan%20Taman%20Anugerah!5e0!3m2!1sid!2sid!4v1718873000000!5m2!1sid!2sid" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 {{-- ══ CTA BAND ══ --}}
@@ -288,7 +465,7 @@
         <h2 class="font-display text-4xl sm:text-5xl font-semibold italic text-white">Siap Sempurnakan Hijab Anda?</h2>
         <p class="text-white/60 text-lg leading-relaxed max-w-xl mx-auto">Hubungi kami langsung via WhatsApp atau mulai belanja di toko online kami. Pengiriman ke seluruh Indonesia.</p>
         <div class="flex flex-wrap justify-center gap-4">
-            <a href="https://wa.me/6282268480864" target="_blank"
+            <a href="https://wa.me/6283821102186" target="_blank"
                class="inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#1ebe5c] text-white font-semibold px-8 py-4 rounded-2xl text-base transition-all shadow-xl hover:scale-[1.02] btn-ring">
                 <i data-lucide="message-circle" class="w-5 h-5"></i>
                 Chat WhatsApp
@@ -301,5 +478,4 @@
         </div>
     </div>
 </section>
-
 @endsection

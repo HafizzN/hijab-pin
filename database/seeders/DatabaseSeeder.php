@@ -18,13 +18,13 @@ class DatabaseSeeder extends Seeder
     {
         // 1. Create Users (Updated with business manager & customer info)
         User::firstOrCreate(
-            ['email' => 'meripurnamasari4@gmail.com'],
+            ['email' => 'hijabpinhouse@gmail.com'],
             [
                 'name' => 'Meri Purnama Sari',
                 'password' => Hash::make('admin123'),
                 'role' => 'admin',
-                'phone' => '0822-6848-0864',
-                'address' => 'Jalan Padang Laweh, No.34, Kel. Sungai Nanam, Kec. Lembah Gumanti',
+                'phone' => '0838-2110-2186',
+                'address' => 'Perumahan Taman Anugerah, Blok G7, Balai Gadang, Kec. Koto Tangah',
             ]
         );
 

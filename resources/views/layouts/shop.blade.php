@@ -143,7 +143,7 @@
                     <span class="text-[#C5A46B]">✦</span>
                     <span class="flex items-center gap-2 opacity-90"><i data-lucide="heart" class="w-3 h-3 text-[#C5A46B]"></i> Aman untuk Semua Jenis Hijab</span>
                     <span class="text-[#C5A46B]">✦</span>
-                    <span class="flex items-center gap-2 opacity-90"><i data-lucide="phone" class="w-3 h-3 text-[#C5A46B]"></i> WA: 0822-6848-0864</span>
+                    <span class="flex items-center gap-2 opacity-90"><i data-lucide="phone" class="w-3 h-3 text-[#C5A46B]"></i> WA: 0838-2110-2186</span>
                     <span class="text-[#C5A46B]">✦</span>
                 </span>
                 @endforeach
@@ -172,7 +172,7 @@
                 <a href="{{ route('shop.index') }}" class="nav-item text-sm font-medium text-[#1C1915] hover:text-[#C5A46B] transition-colors pb-0.5">Belanja</a>
                 <a href="{{ route('shop.index') }}?category=premium-pins" class="nav-item text-sm font-medium text-[#6B5E52] hover:text-[#C5A46B] transition-colors pb-0.5">Premium Pins</a>
                 <a href="{{ route('shop.index') }}?category=brooches-rings" class="nav-item text-sm font-medium text-[#6B5E52] hover:text-[#C5A46B] transition-colors pb-0.5">Bros & Cincin</a>
-                <a href="https://wa.me/6282268480864" target="_blank" class="nav-item text-sm font-medium text-[#6B5E52] hover:text-[#C5A46B] transition-colors pb-0.5">Hubungi Kami</a>
+                <a href="https://wa.me/6283821102186" target="_blank" class="nav-item text-sm font-medium text-[#6B5E52] hover:text-[#C5A46B] transition-colors pb-0.5">Hubungi Kami</a>
             </div>
 
             <!-- Right actions -->
@@ -278,7 +278,7 @@
             <a href="{{ route('shop.index') }}?category=brooches-rings" @click="mobileMenu=false" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-[#C5A46B]/8 text-base font-medium text-[#1C1915]">
                 <i data-lucide="star" class="w-5 h-5 text-[#C5A46B]"></i> Bros & Cincin
             </a>
-            <a href="https://wa.me/6282268480864" target="_blank" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-[#C5A46B]/8 text-base font-medium text-[#1C1915]">
+            <a href="https://wa.me/6283821102186" target="_blank" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-[#C5A46B]/8 text-base font-medium text-[#1C1915]">
                 <i data-lucide="message-circle" class="w-5 h-5 text-[#C5A46B]"></i> WhatsApp Kami
             </a>
             @guest
@@ -457,9 +457,23 @@
                     <a href="https://facebook.com/hijabpinhouse" target="_blank" class="h-10 w-10 rounded-full border border-white/10 hover:border-[#C5A46B] hover:bg-[#C5A46B]/10 flex items-center justify-center transition-all text-white/50 hover:text-white">
                         <i data-lucide="facebook" class="w-4 h-4"></i>
                     </a>
-                    <a href="https://wa.me/6282268480864" target="_blank" class="h-10 w-10 rounded-full border border-white/10 hover:border-[#C5A46B] hover:bg-[#C5A46B]/10 flex items-center justify-center transition-all text-white/50 hover:text-white">
+                    <a href="https://wa.me/6283821102186" target="_blank" class="h-10 w-10 rounded-full border border-white/10 hover:border-[#C5A46B] hover:bg-[#C5A46B]/10 flex items-center justify-center transition-all text-white/50 hover:text-white">
                         <i data-lucide="message-circle" class="w-4 h-4"></i>
                     </a>
+                </div>
+                <div class="space-y-2 pt-2 border-t border-white/5">
+                    <span class="text-[10px] text-white/40 uppercase tracking-widest font-semibold block">Official Store</span>
+                    <div class="flex flex-wrap gap-2">
+                        <a href="https://id.shp.ee/JuGwMo5q" target="_blank" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-white/5 border border-white/10 hover:border-[#C5A46B] text-xs text-white/60 hover:text-white transition-all">
+                            <span class="text-orange-500 font-extrabold">S</span> Shopee
+                        </a>
+                        <a href="https://tk.tokopedia.com/ZSQvfd611/" target="_blank" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-white/5 border border-white/10 hover:border-[#C5A46B] text-xs text-white/60 hover:text-white transition-all">
+                            <span class="text-emerald-500 font-extrabold">T</span> Tokopedia
+                        </a>
+                        <a href="https://www.lazada.co.id/shop/hijabpinhouse" target="_blank" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-white/5 border border-white/10 hover:border-[#C5A46B] text-xs text-white/60 hover:text-white transition-all">
+                            <span class="text-blue-500 font-extrabold">L</span> Lazada
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -485,7 +499,7 @@
                     <li><a href="{{ route('dashboard') }}" class="text-white/50 hover:text-[#C5A46B] transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-3 h-3"></i> Dashboard Saya</a></li>
                     <li><a href="{{ route('orders.index') }}" class="text-white/50 hover:text-[#C5A46B] transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-3 h-3"></i> Riwayat Pesanan</a></li>
                     @endauth
-                    <li><a href="https://wa.me/6282268480864" target="_blank" class="text-white/50 hover:text-[#C5A46B] transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-3 h-3"></i> Cara Pemesanan</a></li>
+                    <li><a href="https://wa.me/6283821102186" target="_blank" class="text-white/50 hover:text-[#C5A46B] transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-3 h-3"></i> Cara Pemesanan</a></li>
                 </ul>
             </div>
 
@@ -497,19 +511,19 @@
                         <div class="h-8 w-8 rounded-lg bg-[#C5A46B]/10 flex items-center justify-center shrink-0 mt-0.5">
                             <i data-lucide="map-pin" class="w-3.5 h-3.5 text-[#C5A46B]"></i>
                         </div>
-                        <span class="text-white/50 leading-relaxed">Jalan Padang Laweh, No.34, Kel. Sungai Nanam, Kec. Lembah Gumanti</span>
+                        <span class="text-white/50 leading-relaxed">Perumahan Taman Anugerah, Blok G7, Balai Gadang, Kec. Koto Tangah</span>
                     </li>
                     <li class="flex items-center gap-3">
                         <div class="h-8 w-8 rounded-lg bg-[#C5A46B]/10 flex items-center justify-center shrink-0">
                             <i data-lucide="mail" class="w-3.5 h-3.5 text-[#C5A46B]"></i>
                         </div>
-                        <span class="text-white/50">meripurnamasari4@gmail.com</span>
+                        <span class="text-white/50">hijabpinhouse@gmail.com</span>
                     </li>
                     <li class="flex items-center gap-3">
                         <div class="h-8 w-8 rounded-lg bg-[#C5A46B]/10 flex items-center justify-center shrink-0">
                             <i data-lucide="phone" class="w-3.5 h-3.5 text-[#C5A46B]"></i>
                         </div>
-                        <a href="https://wa.me/6282268480864" class="text-white/50 hover:text-[#C5A46B] transition-colors">0822-6848-0864</a>
+                        <a href="https://wa.me/6283821102186" target="_blank" class="text-white/50 hover:text-[#C5A46B] transition-colors">0838-2110-2186</a>
                     </li>
                 </ul>
             </div>

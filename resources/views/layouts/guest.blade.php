@@ -83,7 +83,7 @@
             {{-- Bottom contact --}}
             <div class="relative z-10 flex items-center gap-4 text-white/35 text-sm">
                 <i data-lucide="message-circle" class="w-4 h-4 text-[#C5A46B]/50"></i>
-                <span>WA: 0822-6848-0864</span>
+                <span>WA: 0838-2110-2186</span>
                 <span class="text-[#C5A46B]/30">·</span>
                 <span>@hijab_pin_house</span>
             </div>
