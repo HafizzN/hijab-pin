@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ═══════════════════════════════════════════════════
+   HIJAB PIN HOUSE — Global Design System
+   Palette: Ivory / Dark / Gold
+   Fonts : Cormorant Garamond (display) + DM Sans (body)
+═══════════════════════════════════════════════════ */
+
+@layer base {
+  :root {
+    --ivory:   #FAF6F0;
+    --dark:    #1C1915;
+    --gold:    #C5A46B;
+    --gold-lt: #E8D5B0;
+    --muted:   #6B5E52;
+  }
+
+  * {
+    font-family: 'DM Sans', sans-serif;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #FAF6F0;
+    color: #1C1915;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-track { background: #FAF6F0; }
+  ::-webkit-scrollbar-thumb { background: #E8D5B0; border-radius: 99px; }
+
+  [x-cloak] { display: none !important; }
+}
+
+@layer components {
+  /* ── Typography ── */
+  .font-display { font-family: 'Cormorant Garamond', serif; }
+
+  /* ── Buttons ── */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 bg-[#1C1915] hover:bg-[#C5A46B] text-white font-semibold rounded-2xl transition-all duration-300 shadow-md px-7 py-3.5 text-sm;
+  }
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 bg-[#C5A46B] hover:bg-[#1C1915] text-white font-semibold rounded-2xl transition-all duration-300 shadow-md px-7 py-3.5 text-sm;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 border-2 border-[#C5A46B] text-[#1C1915] hover:bg-[#C5A46B] hover:text-white font-semibold rounded-2xl transition-all duration-300 px-7 py-3.5 text-sm;
+  }
+
+  /* ── Form Inputs ── */
+  .form-input {
+    @apply w-full px-4 py-3.5 rounded-2xl border border-gray-200 bg-gray-50 text-sm text-[#1C1915] placeholder-gray-400 outline-none transition-all duration-200;
+  }
+  .form-input:focus {
+    @apply bg-white border-[#C5A46B];
+    box-shadow: 0 0 0 3px rgba(197, 164, 107, 0.15);
+  }
+
+  /* ── Cards ── */
+  .card {
+    @apply bg-white rounded-3xl border border-gray-100 shadow-sm;
+  }
+  .card-hover {
+    @apply transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl;
+  }
+
+  /* ── Badges ── */
+  .badge-gold {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#C5A46B]/10 border border-[#C5A46B]/20 text-[#C5A46B] text-xs font-semibold tracking-widest uppercase;
+  }
+  .badge-dark {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1C1915] border border-[#C5A46B]/20 text-[#FAF6F0] text-xs font-bold uppercase tracking-wide;
+  }
+
+  /* ── Section heading group ── */
+  .section-eyebrow {
+    @apply text-[#C5A46B] text-xs uppercase tracking-widest font-bold;
+  }
+  .section-heading {
+    @apply font-display text-4xl sm:text-5xl font-semibold italic text-[#1C1915];
+  }
+  .section-subtext {
+    @apply text-[#6B5E52] text-base leading-relaxed;
+  }
+}
+
+@layer utilities {
+  /* ── Ticker animation ── */
+  @keyframes ticker {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .ticker-wrap  { overflow: hidden; white-space: nowrap; }
+  .ticker-inner { display: inline-flex; animation: ticker 28s linear infinite; }
+  .ticker-inner:hover { animation-play-state: paused; }
+
+  /* ── Reveal on scroll ── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── Card hover glow ── */
+  .card-glow {
+    transition: box-shadow 0.35s ease, transform 0.35s ease;
+  }
+  .card-glow:hover {
+    box-shadow: 0 20px 48px rgba(197, 164, 107, 0.16);
+    transform: translateY(-6px);
+  }
+
+  /* ── Nav link underline ── */
+  .nav-link { position: relative; }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -3px; left: 0;
+    width: 0; height: 2px;
+    background: #C5A46B;
+    transition: width 0.3s ease;
+  }
+  .nav-link:hover::after { width: 100%; }
+  .nav-scrolled { box-shadow: 0 4px 30px rgba(28, 25, 21, 0.08); }
+
+  /* ── Button pulse ring ── */
+  @keyframes ring-pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(197, 164, 107, 0.45); }
+    80%  { box-shadow: 0 0 0 12px rgba(197, 164, 107, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(197, 164, 107, 0); }
+  }
+  .btn-ring:hover { animation: ring-pulse 1.2s ease-out infinite; }
+
+  /* ── Shimmer on buttons ── */
+  @keyframes shimmer-slide {
+    0%   { transform: translateX(-100%) skewX(-15deg); }
+    100% { transform: translateX(220%) skewX(-15deg); }
+  }
+  .btn-shimmer { position: relative; overflow: hidden; }
+  .btn-shimmer::after {
+    content: '';
+    position: absolute; top: 0; left: 0;
+    width: 40%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+    animation: shimmer-slide 2.2s ease-in-out infinite;
+  }
+
+  /* ── Floating decoration ── */
+  @keyframes float-up {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-10px); }
+  }
+  .float-anim      { animation: float-up 5s ease-in-out infinite; }
+  .float-anim-slow { animation: float-up 7s ease-in-out infinite reverse; }
+
+  /* ── Blob background decoration ── */
+  .blob {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(80px);
+    pointer-events: none;
+  }
+
+  /* ── Cart badge bounce ── */
+  @keyframes badge-bounce {
+    0%, 100% { transform: scale(1); }
+    40%       { transform: scale(1.4); }
+  }
+  .badge-bounce { animation: badge-bounce 0.5s ease; }
+}
