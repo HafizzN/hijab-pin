@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="max-w-7xl mx-auto py-12 px-4 sm:px-8">
-    <h1 class="text-3xl font-bold font-playfair italic text-[#2A2421] mb-8 flex items-center gap-2">
+    <h1 class="text-3xl font-bold font-serif-display text-[#2A2421] mb-8 flex items-center gap-2">
         <i data-lucide="credit-card" class="w-7 h-7 text-[#C5A880]"></i> Form Pembayaran / Checkout
     </h1>
 
@@ -13,7 +13,7 @@
         
         <!-- Shipping Details Form Column -->
         <div class="lg:col-span-8 bg-white rounded-3xl border border-gray-150 p-6 sm:p-8 shadow-sm space-y-6">
-            <h3 class="font-bold text-lg font-playfair italic text-[#2A2421] border-b border-gray-100 pb-3">
+            <h3 class="font-bold text-lg font-serif-display text-[#2A2421] border-b border-gray-100 pb-3">
                 Informasi Pengiriman
             </h3>
 
@@ -85,7 +85,7 @@
 
         <!-- Summary & Confirm Column -->
         <div class="lg:col-span-4 bg-white rounded-3xl border border-gray-150 p-6 shadow-sm space-y-6">
-            <h3 class="font-bold text-lg font-playfair italic text-[#2A2421]">Detail Pesanan</h3>
+            <h3 class="font-bold text-lg font-serif-display text-[#2A2421]">Detail Pesanan</h3>
             
             <div class="divide-y divide-gray-100 max-h-60 overflow-y-auto pr-1">
                 @php $subtotal = 0; @endphp
@@ -96,8 +96,8 @@
                             <img src="{{ $item['image_url'] }}" alt="{{ $item['name'] }}" class="h-full w-full object-cover">
                         </div>
                         <div class="flex-1 min-w-0">
-                            <h4 class="text-xs font-semibold text-[#2A2421] truncate leading-tight">{{ $item['name'] }}</h4>
-                            <p class="text-[10px] text-gray-500 mt-0.5">{{ $item['quantity'] }} x Rp {{ number_format($item['price'], 0, ',', '.') }}</p>
+                            <h4 class="text-xs font-semibold font-display text-[#2A2421] truncate leading-tight">{{ $item['name'] }}</h4>
+                            <p class="text-[10px] font-display text-gray-500 mt-0.5">{{ $item['quantity'] }} x Rp {{ number_format($item['price'], 0, ',', '.') }}</p>
                         </div>
                     </div>
                 @endforeach

@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="max-w-7xl mx-auto py-12 px-4 sm:px-8">
-    <h1 class="text-3xl font-bold font-playfair italic text-[#2A2421] mb-8 flex items-center gap-2">
+    <h1 class="text-3xl font-bold font-serif-display text-[#2A2421] mb-8 flex items-center gap-2">
         <i data-lucide="shopping-cart" class="w-7 h-7 text-[#C5A880]"></i> Keranjang Belanja Anda
     </h1>
 
@@ -42,15 +42,15 @@
                                     <div class="flex flex-1 flex-col justify-between">
                                         <div class="flex flex-col sm:flex-row sm:justify-between gap-2">
                                             <div>
-                                                <h3 class="font-bold text-sm sm:text-base text-[#2A2421] hover:text-[#C5A880] transition-colors leading-tight">
+                                                <h3 class="font-bold text-sm sm:text-base font-display text-[#2A2421] hover:text-[#C5A880] transition-colors leading-tight">
                                                     <a href="{{ route('shop.show', $item['slug']) }}">{{ $item['name'] }}</a>
                                                 </h3>
-                                                <p class="text-xs font-semibold text-[#C5A880] mt-1">Rp {{ number_format($item['price'], 0, ',', '.') }}</p>
+                                                <p class="text-xs font-semibold font-display text-[#C5A880] mt-1">Rp {{ number_format($item['price'], 0, ',', '.') }}</p>
                                             </div>
                                             
                                             <!-- Total per item -->
-                                            <p class="text-sm font-bold text-[#2A2421] self-start sm:self-auto sm:text-right">
-                                                Subtotal: <span class="text-[#C5A880]">Rp {{ number_format($item['price'] * $item['quantity'], 0, ',', '.') }}</span>
+                                            <p class="text-sm font-bold font-display text-[#2A2421] self-start sm:self-auto sm:text-right">
+                                                Subtotal: <span class="text-[#C5A880] font-display">Rp {{ number_format($item['price'] * $item['quantity'], 0, ',', '.') }}</span>
                                             </p>
                                         </div>
 
@@ -81,7 +81,7 @@
 
             <!-- Summary Column -->
             <div class="lg:col-span-4 bg-white rounded-3xl border border-gray-150 p-6 shadow-sm space-y-6">
-                <h3 class="font-bold text-lg font-playfair italic text-[#2A2421]">Ringkasan Belanja</h3>
+                <h3 class="font-bold text-lg font-serif-display text-[#2A2421]">Ringkasan Belanja</h3>
                 
                 <div class="space-y-3 text-xs">
                     <div class="flex justify-between text-gray-500">

@@ -37,7 +37,7 @@
                     <span class="h-1.5 w-1.5 rounded-full bg-[#C5A46B] animate-pulse"></span>
                     Selamat {{ $greeting }}
                 </div>
-                <h1 class="font-display text-3xl sm:text-4xl font-semibold italic text-white leading-none">
+                <h1 class="font-display text-3xl sm:text-4xl font-semibold text-white leading-none">
                     {{ $user->name }}
                 </h1>
                 <p class="text-white/50 text-base max-w-sm leading-relaxed">
@@ -71,7 +71,7 @@
             </div>
             <span class="text-[#C5A46B] text-xs font-bold uppercase tracking-widest">Total</span>
         </div>
-        <div class="font-display text-4xl font-semibold italic text-[#1C1915]">{{ $totalOrders }}</div>
+        <div class="font-display text-4xl font-semibold text-[#1C1915]">{{ $totalOrders }}</div>
         <div class="text-[#6B5E52] text-sm font-medium mt-1">Total Pesanan</div>
         <div class="mt-4 h-1 rounded-full bg-gradient-to-r from-[#C5A46B] to-amber-200 w-3/4 group-hover:w-full transition-all duration-500"></div>
     </div>
@@ -83,7 +83,7 @@
             </div>
             <span class="text-amber-500 text-xs font-bold uppercase tracking-widest">Aktif</span>
         </div>
-        <div class="font-display text-4xl font-semibold italic text-[#1C1915]">{{ $activeOrders }}</div>
+        <div class="font-display text-4xl font-semibold text-[#1C1915]">{{ $activeOrders }}</div>
         <div class="text-[#6B5E52] text-sm font-medium mt-1">Sedang Diproses</div>
         <div class="mt-4 h-1 rounded-full bg-gradient-to-r from-amber-400 to-orange-200 w-1/2 group-hover:w-full transition-all duration-500"></div>
     </div>
@@ -95,7 +95,7 @@
             </div>
             <span class="text-emerald-600 text-xs font-bold uppercase tracking-widest">Pengeluaran</span>
         </div>
-        <div class="font-display text-3xl font-semibold italic text-[#1C1915]">Rp {{ number_format($totalSpent, 0, ',', '.') }}</div>
+        <div class="font-display text-3xl font-semibold text-[#1C1915]">Rp {{ number_format($totalSpent, 0, ',', '.') }}</div>
         <div class="text-[#6B5E52] text-sm font-medium mt-1">Total Belanja</div>
         <div class="mt-4 h-1 rounded-full bg-gradient-to-r from-emerald-400 to-teal-200 w-2/3 group-hover:w-full transition-all duration-500"></div>
     </div>
@@ -106,7 +106,7 @@
 
     <div class="lg:col-span-8 bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden">
         <div class="px-8 py-6 border-b border-gray-100 flex items-center justify-between bg-[#FAF6F0]/60">
-            <h3 class="font-display text-xl font-semibold italic text-[#1C1915] flex items-center gap-3">
+            <h3 class="font-display text-xl font-semibold text-[#1C1915] flex items-center gap-3">
                 <i data-lucide="history" class="w-5 h-5 text-[#C5A46B]"></i>
                 Pesanan Terakhir
             </h3>
@@ -122,7 +122,7 @@
                 <div class="h-20 w-20 rounded-full bg-gray-50 flex items-center justify-center mx-auto mb-6">
                     <i data-lucide="shopping-cart" class="w-9 h-9 text-gray-200"></i>
                 </div>
-                <h4 class="font-display text-xl font-semibold italic text-[#1C1915]">Belum Ada Pesanan</h4>
+                <h4 class="font-display text-xl font-semibold text-[#1C1915]">Belum Ada Pesanan</h4>
                 <p class="text-[#6B5E52] text-base mt-2 max-w-xs mx-auto leading-relaxed">Temukan koleksi aksesoris premium dan mulai berbelanja hari ini!</p>
                 <a href="{{ route('shop.index') }}" class="inline-flex items-center gap-2 mt-6 bg-[#1C1915] hover:bg-[#C5A46B] text-white px-6 py-3 rounded-xl font-semibold text-sm transition-all btn-ring">
                     <i data-lucide="store" class="w-4 h-4"></i> Belanja Sekarang
@@ -158,7 +158,7 @@
                                 <td class="py-5 px-7">
                                     <span class="px-3 py-1 rounded-full text-xs font-bold border {{ $cfg[0] }}">{{ $cfg[1] }}</span>
                                 </td>
-                                <td class="py-5 px-7 font-display text-base font-semibold italic text-[#C5A46B]">Rp {{ number_format($order->total_amount, 0, ',', '.') }}</td>
+                                <td class="py-5 px-7 font-display text-base font-semibold text-[#C5A46B]">Rp {{ number_format($order->total_amount, 0, ',', '.') }}</td>
                                 <td class="py-5 px-7 text-right">
                                     <a href="{{ route('orders.show', $order->id) }}" class="inline-flex items-center gap-1.5 text-sm font-semibold text-[#C5A46B] hover:text-[#1C1915] transition-colors">
                                         Detail <i data-lucide="chevron-right" class="w-4 h-4"></i>
@@ -175,7 +175,7 @@
     <div class="lg:col-span-4 bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden flex flex-col">
         <div class="px-7 py-6 border-b border-gray-100 bg-[#FAF6F0]/60 flex items-center gap-3">
             <i data-lucide="user-circle-2" class="w-5 h-5 text-[#C5A46B]"></i>
-            <h3 class="font-display text-xl font-semibold italic text-[#1C1915]">Profil Saya</h3>
+            <h3 class="font-display text-xl font-semibold text-[#1C1915]">Profil Saya</h3>
         </div>
 
         <div class="p-7 space-y-6 flex-grow">
@@ -191,7 +191,7 @@
                     @if($f[1])
                         <span class="text-sm font-medium text-[#1C1915]">{{ $f[1] }}</span>
                     @else
-                        <span class="text-sm italic text-gray-400">Belum ditambahkan</span>
+                        <span class="text-sm text-gray-400">Belum ditambahkan</span>
                     @endif
                 </div>
             </div>
@@ -228,7 +228,7 @@
     <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
         <div class="space-y-1.5">
             <span class="section-eyebrow block">Pilihan Terbaik</span>
-            <h3 class="font-display text-2xl font-semibold italic text-[#1C1915] flex items-center gap-3">
+            <h3 class="font-display text-2xl font-semibold text-[#1C1915] flex items-center gap-3">
                 <i data-lucide="sparkles" class="w-6 h-6 text-[#C5A46B]"></i>
                 Rekomendasi Eksklusif
             </h3>
@@ -250,11 +250,11 @@
                 </div>
                 <div class="p-5 flex flex-col gap-3 flex-grow">
                     <div class="space-y-1 flex-grow">
-                        <h4 class="font-display text-lg font-semibold italic text-[#1C1915] group-hover:text-[#C5A46B] transition-colors line-clamp-1">{{ $prod->name }}</h4>
+                        <h4 class="font-display text-lg font-semibold text-[#1C1915] group-hover:text-[#C5A46B] transition-colors line-clamp-1">{{ $prod->name }}</h4>
                         <p class="text-sm text-[#6B5E52] line-clamp-2 leading-relaxed">{{ $prod->description }}</p>
                     </div>
                     <div class="flex justify-between items-center pt-3 border-t border-gray-100 mt-auto">
-                        <span class="font-display text-xl font-semibold italic text-[#1C1915]">Rp {{ number_format($prod->price, 0, ',', '.') }}</span>
+                        <span class="font-display text-xl font-semibold text-[#1C1915]">Rp {{ number_format($prod->price, 0, ',', '.') }}</span>
                         <a href="{{ route('shop.show', $prod->slug) }}"
                            class="h-10 w-10 flex items-center justify-center rounded-2xl bg-[#1C1915] hover:bg-[#C5A46B] text-white transition-all duration-300 hover:scale-110 shadow-md">
                             <i data-lucide="eye" class="w-4 h-4"></i>

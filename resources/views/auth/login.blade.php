@@ -1,6 +1,6 @@
 <x-guest-layout>
     <div class="mb-8 space-y-1.5">
-        <h2 class="font-display text-3xl font-semibold italic text-[#1C1915]">Selamat Datang</h2>
+        <h2 class="font-display text-3xl font-semibold text-[#1C1915] tracking-wide">Selamat Datang</h2>
         <p class="text-[#6B5E52] text-base">Masuk untuk melanjutkan belanja Anda.</p>
     </div>
 

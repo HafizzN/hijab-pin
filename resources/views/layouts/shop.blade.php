@@ -8,15 +8,48 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
-        /* Base */
-        * { font-family: 'DM Sans', sans-serif; }
-        .font-display { font-family: 'Cormorant Garamond', serif !important; }
+        /* Base / Body Text: Poppins Regular */
+        * {
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: -0.01em;
+        }
+        
+        /* Heading Besar, Sub Heading, Price/Product Name: Playfair Display */
+        h1, h2, h3, h4, h5, h6, .font-display, .font-serif-display, .font-playfair, .product-price, .product-name {
+            font-family: 'Playfair Display', serif !important;
+            letter-spacing: -0.015em !important;
+            text-transform: none !important;
+            line-height: 1.25 !important;
+        }
+
+        /* Hero h1 title specific styles */
+        .hero-title {
+            font-family: 'Playfair Display', serif !important;
+            letter-spacing: -0.02em !important;
+            line-height: 1.15 !important;
+            font-weight: 600 !important;
+        }
+        
+        /* Menu Navbar: Poppins Medium */
+        .nav-item {
+            font-family: 'Poppins', sans-serif !important;
+            font-weight: 500 !important;
+            letter-spacing: 0.02em !important;
+        }
+        
+        /* Button: Poppins SemiBold */
+        button, a.btn-ring, .btn-shimmer, .btn-primary, .btn-secondary, [type='submit'], [type='button'] {
+            font-family: 'Poppins', sans-serif !important;
+            font-weight: 600 !important;
+            letter-spacing: 0.015em !important;
+        }
+        
         [x-cloak] { display: none !important; }
 
         /* Scrollbar */
@@ -162,8 +195,8 @@
                     <div class="absolute -inset-1 rounded-full border border-[#C5A46B]/25 scale-0 group-hover:scale-100 transition-transform duration-300"></div>
                 </div>
                 <div class="leading-none">
-                    <div class="font-display text-2xl font-semibold italic text-[#1C1915] leading-none">Hijab Pin</div>
-                    <div class="text-[9px] uppercase tracking-[.25em] text-[#C5A46B] font-semibold mt-0.5">House Premium</div>
+                    <div class="font-display text-2xl font-bold text-[#1C1915] leading-none tracking-widest">HIJAB PIN</div>
+                    <div class="text-[9px] uppercase tracking-[.25em] text-[#C5A46B] font-semibold mt-1">House Premium</div>
                 </div>
             </a>
 
@@ -350,7 +383,7 @@
                     <!-- Cart Header -->
                     <div class="flex items-center justify-between px-7 py-6 border-b border-gray-100 bg-[#FAF6F0]">
                         <div>
-                            <h2 class="font-display text-2xl font-semibold italic text-[#1C1915]">Keranjang</h2>
+                            <h2 class="font-display text-2xl font-semibold text-[#1C1915]">Keranjang</h2>
                             <p class="text-xs text-[#6B5E52] mt-0.5">Hijab Pin House</p>
                         </div>
                         <button @click="cartOpen = false" class="h-10 w-10 flex items-center justify-center rounded-full border border-gray-200 hover:border-[#C5A46B] hover:bg-[#C5A46B]/5 transition-all text-gray-500 hover:text-[#1C1915]">
@@ -367,7 +400,7 @@
                                     <i data-lucide="shopping-cart" class="w-9 h-9 text-[#C5A46B]"></i>
                                 </div>
                                 <div>
-                                    <h3 class="font-display text-xl font-semibold italic text-[#1C1915]">Keranjang Kosong</h3>
+                                    <h3 class="font-display text-xl font-semibold text-[#1C1915]">Keranjang Kosong</h3>
                                     <p class="text-sm text-[#6B5E52] mt-1 max-w-[200px] leading-relaxed">Temukan koleksi pin hijab eksklusif kami.</p>
                                 </div>
                                 <a href="{{ route('shop.index') }}" @click="cartOpen = false"
@@ -443,22 +476,25 @@
                 <div class="flex items-center gap-3">
                     <img src="{{ asset('logo.jpeg') }}" alt="Logo" class="h-12 w-12 rounded-full border-2 border-[#C5A46B]/30 object-cover">
                     <div>
-                        <div class="font-display text-xl font-semibold italic text-white">Hijab Pin House</div>
-                        <div class="text-[10px] uppercase tracking-widest text-[#C5A46B] font-medium">Premium Quality</div>
+                        <div class="font-display text-xl font-bold text-white tracking-widest">HIJAB PIN HOUSE</div>
+                        <div class="text-[10px] uppercase tracking-widest text-[#C5A46B] font-medium mt-1">Premium Quality</div>
                     </div>
                 </div>
                 <p class="text-sm leading-relaxed text-white/55">
                     Cantik, elegan, dan nyaman untuk setiap hijabmu. Pin hijab terbaik dengan bahan premium yang aman dan tidak mudah pudar.
                 </p>
                 <div class="flex gap-3 pt-1">
-                    <a href="https://instagram.com/hijab_pin_house" target="_blank" class="h-10 w-10 rounded-full border border-white/10 hover:border-[#C5A46B] hover:bg-[#C5A46B]/10 flex items-center justify-center transition-all text-white/50 hover:text-white">
-                        <i data-lucide="instagram" class="w-4 h-4"></i>
+                    <a href="https://instagram.com/hijab_pin_house" target="_blank" class="h-10 w-10 rounded-full border border-white/10 hover:border-[#C5A46B] hover:bg-[#C5A46B]/10 flex items-center justify-center transition-all text-white/50 hover:text-white" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
                     </a>
-                    <a href="https://facebook.com/hijabpinhouse" target="_blank" class="h-10 w-10 rounded-full border border-white/10 hover:border-[#C5A46B] hover:bg-[#C5A46B]/10 flex items-center justify-center transition-all text-white/50 hover:text-white">
-                        <i data-lucide="facebook" class="w-4 h-4"></i>
+                    <a href="https://facebook.com/hijabpinhouse" target="_blank" class="h-10 w-10 rounded-full border border-white/10 hover:border-[#C5A46B] hover:bg-[#C5A46B]/10 flex items-center justify-center transition-all text-white/50 hover:text-white" aria-label="Facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
                     </a>
-                    <a href="https://wa.me/6283821102186" target="_blank" class="h-10 w-10 rounded-full border border-white/10 hover:border-[#C5A46B] hover:bg-[#C5A46B]/10 flex items-center justify-center transition-all text-white/50 hover:text-white">
-                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <a href="https://www.tiktok.com/@hijabpinhouse_" target="_blank" class="h-10 w-10 rounded-full border border-white/10 hover:border-[#C5A46B] hover:bg-[#C5A46B]/10 flex items-center justify-center transition-all text-white/50 hover:text-white" aria-label="TikTok">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+                    </a>
+                    <a href="https://wa.me/6283821102186" target="_blank" class="h-10 w-10 rounded-full border border-white/10 hover:border-[#C5A46B] hover:bg-[#C5A46B]/10 flex items-center justify-center transition-all text-white/50 hover:text-white" aria-label="WhatsApp">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
                     </a>
                 </div>
                 <div class="space-y-2 pt-2 border-t border-white/5">
@@ -479,7 +515,7 @@
 
             <!-- Koleksi -->
             <div>
-                <h4 class="font-display text-lg font-semibold italic text-white mb-5">Koleksi</h4>
+                <h4 class="font-display text-lg font-semibold text-white mb-5">Koleksi</h4>
                 <ul class="space-y-3 text-sm">
                     @foreach([
                         ['Semua Produk', route('shop.index')],
@@ -493,7 +529,7 @@
 
             <!-- Layanan -->
             <div>
-                <h4 class="font-display text-lg font-semibold italic text-white mb-5">Layanan</h4>
+                <h4 class="font-display text-lg font-semibold text-white mb-5">Layanan</h4>
                 <ul class="space-y-3 text-sm">
                     @auth
                     <li><a href="{{ route('dashboard') }}" class="text-white/50 hover:text-[#C5A46B] transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-3 h-3"></i> Dashboard Saya</a></li>
@@ -505,7 +541,7 @@
 
             <!-- Kontak -->
             <div>
-                <h4 class="font-display text-lg font-semibold italic text-white mb-5">Hubungi Kami</h4>
+                <h4 class="font-display text-lg font-semibold text-white mb-5">Hubungi Kami</h4>
                 <ul class="space-y-4 text-sm">
                     <li class="flex items-start gap-3">
                         <div class="h-8 w-8 rounded-lg bg-[#C5A46B]/10 flex items-center justify-center shrink-0 mt-0.5">

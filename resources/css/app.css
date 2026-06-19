@@ -81,7 +81,7 @@
     @apply text-[#C5A46B] text-xs uppercase tracking-widest font-bold;
   }
   .section-heading {
-    @apply font-display text-4xl sm:text-5xl font-semibold italic text-[#1C1915];
+    @apply font-display text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#1C1915];
   }
   .section-subtext {
     @apply text-[#6B5E52] text-base leading-relaxed;

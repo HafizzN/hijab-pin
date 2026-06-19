@@ -8,10 +8,47 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Base / Body Text: Poppins Regular */
+        * {
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: -0.01em;
+        }
+        
+        /* Heading Besar, Sub Heading, Price/Product Name: Playfair Display */
+        h1, h2, h3, h4, h5, h6, .font-display, .font-serif-display, .font-playfair, .product-price, .product-name {
+            font-family: 'Playfair Display', serif !important;
+            letter-spacing: -0.015em !important;
+            text-transform: none !important;
+            line-height: 1.25 !important;
+        }
+
+        /* Hero h1 title specific styles */
+        .hero-title {
+            font-family: 'Playfair Display', serif !important;
+            letter-spacing: -0.02em !important;
+            line-height: 1.15 !important;
+            font-weight: 600 !important;
+        }
+        
+        /* Menu Navbar: Poppins Medium */
+        .nav-item {
+            font-family: 'Poppins', sans-serif !important;
+            font-weight: 500 !important;
+            letter-spacing: 0.02em !important;
+        }
+        
+        /* Button: Poppins SemiBold */
+        button, a.btn-ring, .btn-shimmer, .btn-primary, .btn-secondary, [type='submit'], [type='button'] {
+            font-family: 'Poppins', sans-serif !important;
+            font-weight: 600 !important;
+            letter-spacing: 0.015em !important;
+        }
+    </style>
 </head>
 <body class="min-h-screen antialiased bg-[#FAF6F0] text-[#1C1915] overflow-x-hidden">
 
@@ -34,15 +71,15 @@
             <a href="{{ route('shop.index') }}" class="flex items-center gap-4 relative z-10">
                 <img src="{{ asset('logo.jpeg') }}" alt="Hijab Pin House" class="h-14 w-14 rounded-full border-2 border-[#C5A46B]/30 object-cover shadow-2xl">
                 <div>
-                    <div class="font-display text-2xl font-semibold italic text-white">Hijab Pin House</div>
-                    <div class="text-[10px] uppercase tracking-[.22em] text-[#C5A46B] font-semibold">Premium Quality</div>
+                    <div class="font-display text-2xl font-bold text-white tracking-widest">HIJAB PIN HOUSE</div>
+                    <div class="text-[10px] uppercase tracking-[.22em] text-[#C5A46B] font-semibold mt-1">Premium Quality</div>
                 </div>
             </a>
 
             {{-- Center content --}}
             <div class="relative z-10 space-y-10">
                 <div class="space-y-4">
-                    <h2 class="font-display text-5xl font-semibold italic text-white leading-[1.1]">
+                    <h2 class="font-display text-5xl font-semibold text-white leading-[1.1]">
                         Cantik, Elegan, <br><span class="text-[#C5A46B]">Sempurna.</span>
                     </h2>
                     <p class="text-white/60 text-lg leading-relaxed max-w-md">
@@ -68,9 +105,16 @@
 
                 {{-- Product thumbnails --}}
                 <div class="flex gap-3 pt-4">
-                    @foreach(['brooch_elegant_1781882608428','chain_flower_1781882516065','pearl_bow_1781882576650'] as $img)
+                    @php
+                        $thumbnails = [
+                            ['file' => 'Bros Bunga Gold Mutiara Premium.jpeg', 'fallback' => 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=200'],
+                            ['file' => 'Bros Daun Gold Mutiara Elegan.jpeg', 'fallback' => 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=200'],
+                            ['file' => 'Bros Rantai Bunga Silver Double Pin Mutiara.jpeg', 'fallback' => 'https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?q=80&w=200']
+                        ];
+                    @endphp
+                    @foreach($thumbnails as $thumb)
                     <div class="h-20 w-20 rounded-2xl overflow-hidden border border-white/10 bg-white/5">
-                        <img src="{{ file_exists(public_path('images/'.$img.'.png')) ? asset('images/'.$img.'.png') : 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=200' }}"
+                        <img src="{{ file_exists(public_path('images/'.$thumb['file'])) ? asset('images/'.$thumb['file']) : $thumb['fallback'] }}"
                              alt="Product" class="w-full h-full object-cover">
                     </div>
                     @endforeach
@@ -97,8 +141,8 @@
                 <a href="{{ route('shop.index') }}" class="flex flex-col items-center gap-3">
                     <img src="{{ asset('logo.jpeg') }}" alt="Logo" class="h-16 w-16 rounded-full border-2 border-[#C5A46B]/30 shadow-xl object-cover">
                     <div>
-                        <div class="font-display text-3xl font-semibold italic text-[#1C1915]">Hijab Pin House</div>
-                        <div class="text-[10px] uppercase tracking-widest text-[#C5A46B] font-semibold mt-0.5">Premium Quality</div>
+                        <div class="font-display text-3xl font-bold text-[#1C1915] tracking-widest">HIJAB PIN HOUSE</div>
+                        <div class="text-[10px] uppercase tracking-widest text-[#C5A46B] font-semibold mt-1">Premium Quality</div>
                     </div>
                 </a>
             </div>

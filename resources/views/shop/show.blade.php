@@ -40,13 +40,13 @@
                     {{ $product->category->name }}
                 </span>
                 
-                <h1 class="text-3xl sm:text-4xl font-bold font-playfair italic text-[#2A2421] tracking-tight leading-tight">
+                <h1 class="text-3xl sm:text-4xl font-bold font-display text-[#2A2421] tracking-tight leading-tight">
                     {{ $product->name }}
                 </h1>
 
                 <!-- Price Tag -->
                 <div class="flex items-center gap-4">
-                    <span class="text-2xl sm:text-3xl font-extrabold text-[#2A2421]">
+                    <span class="text-2xl sm:text-3xl font-extrabold font-display text-[#2A2421]">
                         Rp {{ number_format($product->price, 0, ',', '.') }}
                     </span>
                     
@@ -114,8 +114,8 @@
     <!-- Related Products -->
     @if(!$relatedProducts->isEmpty())
         <div class="space-y-6">
-            <h2 class="text-2xl font-bold font-playfair italic text-[#2A2421] flex items-center gap-2">
-                <i data-lucide="sparkles" class="w-5 h-5 text-[#C5A880]"></i> Produk Serupa Yang Anda Sukai
+            <h2 class="text-2xl font-bold font-display text-[#2A2421] flex items-center gap-2">
+                <i data-lucide="sparkles" class="w-5 h-5 text-[#C5A46B]"></i> Produk Serupa Yang Anda Sukai
             </h2>
             
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
@@ -132,10 +132,10 @@
                             </div>
                             <div class="mt-4">
                                 <span class="text-[9px] uppercase font-bold text-[#C5A880]">{{ $relProduct->category->name }}</span>
-                                <h3 class="font-bold text-xs text-[#2A2421] mt-1 truncate hover:text-[#C5A880] transition-colors leading-tight">
+                                <h3 class="font-bold text-xs font-display text-[#2A2421] mt-1 truncate hover:text-[#C5A880] transition-colors leading-tight">
                                     <a href="{{ route('shop.show', $relProduct->slug) }}">{{ $relProduct->name }}</a>
                                 </h3>
-                                <p class="text-[#2A2421] font-bold text-xs mt-1">
+                                <p class="text-[#2A2421] font-bold text-xs font-display mt-1">
                                     Rp {{ number_format($relProduct->price, 0, ',', '.') }}
                                 </p>
                             </div>

@@ -20,12 +20,12 @@
                 Koleksi Baru: HP Royal Pearl Series
             </div>
 
-            <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-semibold italic text-white leading-[1.05] tracking-tight">
-                Sempurnakan <br>Keanggunan <br><span class="text-[#C5A46B]">Hijab Anda.</span>
+            <h1 class="hero-title text-4xl sm:text-5xl lg:text-6xl text-white">
+                Kerapihan <br>dalam Setiap <br><span class="text-[#C5A46B]">Sentuhan.</span>
             </h1>
 
-            <p class="text-white/65 text-lg leading-relaxed max-w-lg">
-                Setiap pin & bros dari <strong class="text-white font-semibold">Hijab Pin House</strong> dirancang menggunakan teknologi kawat halus tanpa sangkutan dan bahan premium yang tidak mudah pudar.
+            <p class="text-white/65 text-base leading-relaxed max-w-lg">
+                Sederhana, elegan, dan dirancang dengan penuh kepedulian untuk menjaga keindahan hijab Anda sepanjang hari.
             </p>
 
             <div class="flex flex-wrap gap-4">
@@ -67,13 +67,13 @@
                         </a>
                         <div class="space-y-1.5">
                             <p class="text-[#C5A46B] text-xs uppercase tracking-widest font-semibold">{{ $heroProduct->category->name }}</p>
-                            <h3 class="font-display text-xl font-semibold italic text-white hover:text-[#C5A46B] transition-colors">
+                            <h3 class="font-display text-xl font-semibold text-white hover:text-[#C5A46B] transition-colors">
                                 <a href="{{ route('shop.show', $heroProduct->slug) }}">{{ $heroProduct->name }}</a>
                             </h3>
                             <p class="text-white/55 text-sm leading-relaxed line-clamp-2">{{ $heroProduct->description }}</p>
                         </div>
                         <div class="flex items-center justify-between pt-2 border-t border-white/10">
-                            <span class="font-display text-2xl font-semibold italic text-[#C5A46B]">Rp {{ number_format($heroProduct->price, 0, ',', '.') }}</span>
+                            <span class="font-display text-2xl font-semibold text-[#C5A46B]">Rp {{ number_format($heroProduct->price, 0, ',', '.') }}</span>
                             <form method="POST" action="{{ route('cart.add', $heroProduct->id) }}">
                                 @csrf
                                 <button type="submit" class="flex items-center gap-2 bg-[#C5A46B] hover:bg-white hover:text-[#1C1915] text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition-all btn-ring">
@@ -98,23 +98,23 @@
 <section id="keunggulan" class="bg-white py-24 px-5 sm:px-8">
     <div class="max-w-7xl mx-auto">
         <div class="text-center max-w-2xl mx-auto mb-16 reveal">
-            <span class="section-eyebrow block mb-4">Mengapa Hijab Pin House?</span>
-            <h2 class="section-heading">Kualitas yang Tak Perlu Diragukan</h2>
-            <p class="section-subtext mt-4">Kami memahami bahwa kain hijab Anda berharga. Setiap aksesoris kami dibuat dengan standar kualitas tertinggi.</p>
+            <span class="section-eyebrow block mb-4">Komitmen Kami</span>
+            <h2 class="section-heading">Dedikasi untuk Kenyamanan Anda</h2>
+            <p class="section-subtext mt-4">Kami percaya bahwa detail kecil menentukan kenyamanan. Setiap aksesori dirancang dengan presisi untuk menjaga kerapihan hijab tanpa merusak kain.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             @foreach([
-                ['shield-check','Teknologi Anti-Sangkut','Ujung jarum dirancang halus untuk meminimalkan risiko serat kain hijab tersangkut.','bg-amber-50'],
-                ['gem','Bahan Tahan Karat','Menggunakan bahan logam pilihan yang tahan karat untuk pemakaian sehari-hari.','bg-sky-50'],
-                ['heart','Aman & Nyaman','Bentuk yang ergonomis agar nyaman digunakan untuk melengkapi aktivitas harian Anda.','bg-rose-50'],
+                ['shield-check','Ujung Jarum Halus','Ujung peniti dirancang halus dan presisi, membantu meminimalkan gesekan serta menjaga serat kain hijab Anda tetap rapi.','bg-amber-50'],
+                ['gem','Material Pilihan','Diproduksi menggunakan bahan logam berkualitas yang tahan korosi, memberikan daya tahan optimal untuk penggunaan harian.','bg-sky-50'],
+                ['heart','Presisi & Ergonomis','Bentuk yang proporsional dan ringan, memastikan pin tetap kokoh terpasang tanpa membebani atau mengganggu pergerakan.','bg-rose-50'],
             ] as $i => $f)
             <div class="reveal group p-8 rounded-3xl border border-gray-100 {{ $f[3] }} hover:shadow-xl hover:shadow-[#C5A46B]/10 transition-all duration-400 text-center space-y-5 hover:-translate-y-2" style="transition-delay: {{ $i * 80 }}ms">
                 <div class="mx-auto h-16 w-16 rounded-2xl bg-[#1C1915] flex items-center justify-center group-hover:bg-[#C5A46B] transition-colors duration-300 shadow-lg">
                     <i data-lucide="{{ $f[0] }}" class="w-7 h-7 text-[#C5A46B] group-hover:text-white transition-colors"></i>
                 </div>
-                <h3 class="font-display text-2xl font-semibold italic text-[#1C1915]">{{ $f[1] }}</h3>
-                <p class="text-[#6B5E52] text-base leading-relaxed">{{ $f[2] }}</p>
+                <h3 class="font-display text-lg font-semibold text-[#1C1915] tracking-wider">{{ $f[1] }}</h3>
+                <p class="text-[#6B5E52] text-sm leading-relaxed">{{ $f[2] }}</p>
             </div>
             @endforeach
         </div>
@@ -128,11 +128,11 @@
     <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12 reveal">
         <div class="space-y-2">
             <span class="section-eyebrow block">Koleksi Eksklusif</span>
-            <h2 class="font-display text-4xl sm:text-5xl font-semibold italic text-[#1C1915] flex items-center gap-3">
-                <i data-lucide="sparkles" class="w-7 h-7 text-[#C5A46B]"></i>
-                Semua Produk Kami
+            <h2 class="font-display text-3xl sm:text-4xl font-semibold text-[#1C1915] flex items-center gap-3 tracking-wide">
+                <i data-lucide="sparkles" class="w-6 h-6 text-[#C5A46B]"></i>
+                Koleksi Pilihan
             </h2>
-            <p class="section-subtext">Temukan pilihan pin & bros terbaik untuk kesempurnaan hijab Anda.</p>
+            <p class="section-subtext">Jelajahi kurasi pin dan bros terbaik yang dirancang untuk memperindah penampilan Anda.</p>
         </div>
 
         <form method="GET" action="{{ route('shop.index') }}#katalog" class="flex items-center gap-3 w-full lg:max-w-sm">
@@ -203,7 +203,7 @@
             <div class="h-20 w-20 rounded-full bg-gray-50 flex items-center justify-center mx-auto mb-6">
                 <i data-lucide="search-x" class="w-9 h-9 text-gray-300"></i>
             </div>
-            <h3 class="font-display text-2xl font-semibold italic text-[#1C1915]">Produk Tidak Ditemukan</h3>
+            <h3 class="font-display text-2xl font-semibold text-[#1C1915]">Produk Tidak Ditemukan</h3>
             <p class="text-[#6B5E52] text-base mt-2 max-w-sm mx-auto">Coba kata kunci atau kategori lain.</p>
             <a href="{{ route('shop.index') }}#katalog" class="inline-flex items-center gap-2 mt-6 bg-[#1C1915] hover:bg-[#C5A46B] text-white px-6 py-3 rounded-xl font-semibold text-sm transition-all btn-ring">
                 <i data-lucide="refresh-ccw" class="w-4 h-4"></i> Lihat Semua Produk
@@ -244,14 +244,14 @@
                     <div class="p-5 flex-grow flex flex-col justify-between gap-4">
                         <div class="space-y-1.5">
                             <span class="text-[10px] uppercase font-bold tracking-widest text-[#C5A46B]">{{ $product->category->name }}</span>
-                            <h3 class="font-display text-lg font-semibold italic text-[#1C1915] line-clamp-1 group-hover:text-[#C5A46B] transition-colors leading-snug">
+                            <h3 class="font-display text-lg font-semibold text-[#1C1915] line-clamp-1 group-hover:text-[#C5A46B] transition-colors leading-snug">
                                 <a href="{{ route('shop.show', $product->slug) }}">{{ $product->name }}</a>
                             </h3>
                             <p class="text-[#6B5E52] text-sm line-clamp-2 leading-relaxed">{{ $product->description }}</p>
                         </div>
 
                         <div class="flex items-center justify-between pt-3 border-t border-gray-100">
-                            <span class="font-display text-xl font-semibold italic text-[#1C1915]">
+                            <span class="font-display text-xl font-semibold text-[#1C1915]">
                                 Rp {{ number_format($product->price, 0, ',', '.') }}
                             </span>
                             @if($product->stock > 0)
@@ -271,70 +271,136 @@
                         </div>
                     </div>
                 </div>
-                    <div class="mt-16">
+            @endforeach
+        </div>
+        <div class="mt-16">
             {{ $products->links() }}
         </div>
     @endif
 </section>
 
 {{-- ══ TENTANG & IDENTITAS USAHA ══ --}}
-<section id="tentang" class="bg-white py-24 px-5 sm:px-8 border-t border-gray-50">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-        <!-- Kiri: Tentang Usaha -->
-        <div class="lg:col-span-7 space-y-6 reveal">
-            <span class="section-eyebrow block">Tentang Usaha</span>
-            <h2 class="font-display text-4xl sm:text-5xl font-semibold italic text-[#1C1915] leading-tight">
-                Pin hijab cantik untuk tampilan rapi dan elegan
-            </h2>
-            <div class="space-y-4 text-[#6B5E52] text-base leading-relaxed">
-                <p>
-                    <strong>Hijab Pin House</strong> adalah usaha yang menyediakan berbagai pilihan pin hijab dan bros hijab dengan desain cantik, elegan, serta mudah digunakan. Produk ini ditujukan untuk konsumen yang ingin tampil rapi, anggun, dan percaya diri saat menggunakan hijab.
-                </p>
-                <p>
-                    <strong>Makna usaha:</strong> "Hijab Pin House" bermakna rumah pilihan aksesori hijab yang menyediakan pin hijab berkualitas untuk membantu memperindah tampilan hijab.
-                </p>
-                <p>
-                    <strong>Moto:</strong> Cantik, elegan, dan nyaman untuk setiap hijabmu.
-                </p>
-            </div>
-        </div>
+<section id="tentang" class="bg-white py-28 px-5 sm:px-8 border-t border-gray-100 relative overflow-hidden">
+    {{-- Decorative Background Blobs --}}
+    <div class="blob w-[300px] h-[300px] bg-[#C5A46B]/5 top-10 left-10" style="opacity:.6"></div>
+    <div class="blob w-[400px] h-[400px] bg-[#E8D5B0]/5 bottom-10 right-10" style="opacity:.6"></div>
+
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-start relative z-10">
         
-        <!-- Kanan: Identitas Usaha Card -->
-        <div class="lg:col-span-5 reveal">
-            <div class="bg-[#FAF6F0] rounded-3xl p-8 border border-[#E8D5B0]/30 shadow-md">
-                <h3 class="font-display text-2xl font-semibold italic text-[#1C1915] mb-6 pb-3 border-b border-[#E8D5B0]/40">Identitas Usaha</h3>
-                <div class="space-y-4 text-sm">
-                    <div class="flex justify-between py-2 border-b border-[#E8D5B0]/20">
-                        <span class="text-[#6B5E52] font-medium">Nama Usaha</span>
-                        <span class="text-[#1C1915] font-semibold text-right">Hijab Pin House</span>
+        <!-- Kiri: Tentang Usaha & Image Mockup (col-span-7) -->
+        <div class="lg:col-span-7 space-y-10 reveal">
+            <div class="space-y-4">
+                <span class="section-eyebrow block">Kisah Kami</span>
+                <h2 class="font-display text-3xl sm:text-4xl font-semibold text-[#1C1915] leading-tight tracking-wide">
+                    Harmoni Estetika <br>dan Kualitas
+                </h2>
+                <div class="space-y-5 text-[#6B5E52] text-sm leading-relaxed">
+                    <p>
+                        Di <strong class="text-[#1C1915]">Hijab Pin House</strong>, kami believe bahwa penampilan yang rapi adalah cerminan dari rasa percaya diri Anda. Berawal dari pencarian aksesori yang aman bagi kain hijab, kami berkomitmen untuk menghadirkan pilihan pin dan bros yang anggun dengan mengutamakan kualitas material.
+                    </p>
+                    <p>
+                        Setiap koleksi dirancang untuk menemani aktivitas harian maupun momen spesial Anda, menghadirkan sentuhan elegan yang bersahaja dalam setiap detailnya.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Features Cards Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div class="p-6 rounded-2xl bg-[#FAF6F0] border border-[#E8D5B0]/20 flex gap-4 items-start hover:shadow-md transition-all duration-300">
+                    <div class="h-10 w-10 rounded-xl bg-[#C5A46B]/10 flex items-center justify-center shrink-0">
+                        <i data-lucide="sparkles" class="w-5 h-5 text-[#C5A46B]"></i>
                     </div>
-                    <div class="flex justify-between py-2 border-b border-[#E8D5B0]/20">
-                        <span class="text-[#6B5E52] font-medium">Pengelola</span>
-                        <span class="text-[#1C1915] font-semibold text-right">Meri Purnama Sari</span>
+                    <div>
+                        <h4 class="font-display text-sm font-semibold text-[#1C1915] tracking-wider">Filosofi Nama</h4>
+                        <p class="text-xs text-[#6B5E52] mt-1.5 leading-relaxed">Representasi dari wadah kurasi aksesori hijab terbaik yang menjadi andalan untuk penampilan yang rapi dan elegan.</p>
                     </div>
-                    <div class="flex justify-between py-2 border-b border-[#E8D5B0]/20">
-                        <span class="text-[#6B5E52] font-medium">NIB</span>
-                        <span class="text-[#1C1915] font-semibold text-right">0406260106079</span>
+                </div>
+                <div class="p-6 rounded-2xl bg-[#FAF6F0] border border-[#E8D5B0]/20 flex gap-4 items-start hover:shadow-md transition-all duration-300">
+                    <div class="h-10 w-10 rounded-xl bg-[#C5A46B]/10 flex items-center justify-center shrink-0">
+                        <i data-lucide="heart" class="w-5 h-5 text-[#C5A46B]"></i>
                     </div>
-                    <div class="flex justify-between py-2 border-b border-[#E8D5B0]/20">
-                        <span class="text-[#6B5E52] font-medium">WhatsApp</span>
-                        <a href="https://wa.me/6283821102186" class="text-[#C5A46B] hover:underline font-semibold text-right">0838-2110-2186</a>
-                    </div>
-                    <div class="flex justify-between py-2 border-b border-[#E8D5B0]/20">
-                        <span class="text-[#6B5E52] font-medium">Email</span>
-                        <span class="text-[#1C1915] font-semibold text-right">hijabpinhouse@gmail.com</span>
-                    </div>
-                    <div class="flex justify-between py-2 border-b border-[#E8D5B0]/20">
-                        <span class="text-[#6B5E52] font-medium">Instagram</span>
-                        <a href="https://instagram.com/hijab_pin_house" target="_blank" class="text-[#C5A46B] hover:underline font-semibold text-right">@hijab_pin_house</a>
-                    </div>
-                    <div class="flex flex-col py-2 gap-1.5">
-                        <span class="text-[#6B5E52] font-medium">Alamat</span>
-                        <span class="text-[#1C1915] font-semibold text-sm leading-relaxed">Perumahan Taman Anugerah, Blok G7, Balai Gadang, Kec. Koto Tangah</span>
+                    <div>
+                        <h4 class="font-display text-sm font-semibold text-[#1C1915] tracking-wider">Visi Estetika</h4>
+                        <p class="text-xs text-[#6B5E52] mt-1.5 leading-relaxed">Menghadirkan keselarasan antara keindahan visual dan kenyamanan pemakaian dalam setiap helai hijab Anda.</p>
                     </div>
                 </div>
             </div>
+
+            <!-- Showcase Image Frame -->
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-gray-100 group">
+                <div class="absolute inset-0 bg-[#1C1915]/20 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+                <img src="{{ asset('images/hijab_pin_collection_showcase.png') }}" 
+                     alt="Hijab Pin Collection Showcase" 
+                     class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-700">
+                <div class="absolute bottom-6 left-6 z-20 bg-white/90 backdrop-blur-md px-5 py-3 rounded-2xl border border-white/20 shadow-lg">
+                    <p class="text-xs text-[#C5A46B] font-bold uppercase tracking-wider">Premium Series</p>
+                    <p class="text-sm font-semibold text-[#1C1915] mt-0.5">Koleksi Bros & Pin Eksklusif</p>
+                </div>
+            </div>
         </div>
+        
+        <!-- Kanan: Identitas Usaha Card (col-span-5) -->
+        <div class="lg:col-span-5 reveal">
+            <div class="bg-gradient-to-br from-[#FAF6F0] to-[#F3ECE0] rounded-3xl p-8 border border-[#E8D5B0]/40 shadow-xl relative overflow-hidden">
+                {{-- Decorative pattern overlay --}}
+                <div class="absolute top-0 right-0 w-24 h-24 bg-[#C5A46B]/5 rounded-bl-full pointer-events-none"></div>
+                
+                <div class="text-center mb-8">
+                    <h3 class="font-display text-3xl font-semibold text-[#1C1915]">Identitas Resmi</h3>
+                    <p class="text-xs text-[#6B5E52] mt-1 tracking-widest uppercase">Hijab Pin House Profile</p>
+                    <div class="h-0.5 w-16 bg-[#C5A46B]/40 mx-auto mt-4"></div>
+                </div>
+
+                <div class="space-y-4">
+                    @foreach([
+                        ['building-2', 'Nama Usaha', 'Hijab Pin House', null],
+                        ['user', 'Nama Pengelola', 'Meri Purnama Sari', null],
+                        ['award', 'Nomor Induk Berusaha (NIB)', '0406260106079', null],
+                        ['phone', 'WhatsApp Resmi', '0838-2110-2186', 'https://wa.me/6283821102186'],
+                        ['mail', 'Email Resmi', 'hijabpinhouse@gmail.com', 'mailto:hijabpinhouse@gmail.com'],
+                        ['instagram', 'Instagram', '@hijab_pin_house', 'https://instagram.com/hijab_pin_house'],
+                        ['facebook', 'Facebook', 'hijabpinhouse', 'https://facebook.com/hijabpinhouse'],
+                        ['tiktok', 'TikTok', 'hijabpinhouse_', 'https://www.tiktok.com/@hijabpinhouse_'],
+                        ['map-pin', 'Alamat Utama', 'Perumahan Taman Anugerah, Blok G7, Balai Gadang, Kec. Koto Tangah, Kota Padang, Sumatera Barat', null]
+                    ] as $item)
+                        <div class="flex gap-4 p-3 rounded-2xl hover:bg-white/50 transition-all duration-300 group/row">
+                            <div class="h-10 w-10 rounded-xl bg-white shadow-sm border border-[#E8D5B0]/30 flex items-center justify-center shrink-0 group-hover/row:bg-[#C5A46B] transition-colors duration-300">
+                                <?php if($item[0] === 'building-2'): ?>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#C5A46B] group-hover/row:text-white transition-colors"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2Z"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2Z"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
+                                <?php elseif($item[0] === 'user'): ?>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#C5A46B] group-hover/row:text-white transition-colors"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                                <?php elseif($item[0] === 'award'): ?>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#C5A46B] group-hover/row:text-white transition-colors"><circle cx="12" cy="8" r="7"/><path d="M8.21 13.89 7 23l5-3 5 3-1.21-9.12"/></svg>
+                                <?php elseif($item[0] === 'phone'): ?>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#C5A46B] group-hover/row:text-white transition-colors"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                <?php elseif($item[0] === 'mail'): ?>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#C5A46B] group-hover/row:text-white transition-colors"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                <?php elseif($item[0] === 'instagram'): ?>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#C5A46B] group-hover/row:text-white transition-colors"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                                <?php elseif($item[0] === 'facebook'): ?>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#C5A46B] group-hover/row:text-white transition-colors"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                                <?php elseif($item[0] === 'tiktok'): ?>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#C5A46B] group-hover/row:text-white transition-colors"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+                                <?php elseif($item[0] === 'map-pin'): ?>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#C5A46B] group-hover/row:text-white transition-colors"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                                <?php else: ?>
+                                    <i data-lucide="{{ $item[0] }}" class="w-4 h-4 text-[#C5A46B] group-hover/row:text-white transition-colors"></i>
+                                <?php endif; ?>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <span class="block text-[10px] uppercase tracking-wider text-[#6B5E52] font-semibold">{{ $item[1] }}</span>
+                                @if($item[3])
+                                    <a href="{{ $item[3] }}" target="_blank" class="block text-sm font-bold text-[#1C1915] hover:text-[#C5A46B] transition-colors mt-0.5 truncate">{{ $item[2] }}</a>
+                                @else
+                                    <span class="block text-sm font-bold text-[#1C1915] mt-0.5 leading-snug">{{ $item[2] }}</span>
+                                @endif
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+
     </div>
 </section>
 
@@ -342,9 +408,9 @@
 <section id="policy" class="bg-[#FAF6F0] py-24 px-5 sm:px-8 border-t border-gray-150/30">
     <div class="max-w-7xl mx-auto">
         <div class="text-center max-w-2xl mx-auto mb-16 reveal">
-            <span class="section-eyebrow block mb-4">Policy Usaha</span>
-            <h2 class="section-heading">Aturan Pemesanan & Layanan</h2>
-            <p class="section-subtext mt-4">Kami berkomitmen memberikan pelayanan terbaik demi kenyamanan belanja Anda.</p>
+            <span class="section-eyebrow block mb-4">Aturan Layanan</span>
+            <h2 class="section-heading">Kenyamanan Transaksi Anda</h2>
+            <p class="section-subtext mt-4">Demi menjaga kepercayaan pelanggan, kami menerapkan kebijakan layanan yang transparan dan profesional.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -352,9 +418,9 @@
                 <div class="h-12 w-12 rounded-2xl bg-[#C5A46B]/10 flex items-center justify-center">
                     <i data-lucide="clipboard-list" class="w-6 h-6 text-[#C5A46B]"></i>
                 </div>
-                <h3 class="font-display text-2xl font-semibold italic text-[#1C1915]">Aturan Pemesanan</h3>
+                <h3 class="font-display text-lg font-semibold text-[#1C1915] tracking-wider">Kemudahan Pemesanan</h3>
                 <p class="text-[#6B5E52] text-sm leading-relaxed">
-                    Pemesanan produk kami dapat dilakukan secara praktis melalui website ini atau via WhatsApp. Pastikan nama produk, jumlah, dan alamat pengiriman sudah sesuai sebelum dikonfirmasi.
+                    Pilih produk favorit Anda melalui katalog website atau pesan secara langsung via WhatsApp untuk respons cepat dari tim kami.
                 </p>
             </div>
             
@@ -362,9 +428,9 @@
                 <div class="h-12 w-12 rounded-2xl bg-amber-50 flex items-center justify-center">
                     <i data-lucide="refresh-cw" class="w-6 h-6 text-amber-500"></i>
                 </div>
-                <h3 class="font-display text-2xl font-semibold italic text-[#1C1915]">Return Produk</h3>
+                <h3 class="font-display text-lg font-semibold text-[#1C1915] tracking-wider">Garansi Kualitas</h3>
                 <p class="text-[#6B5E52] text-sm leading-relaxed">
-                    Pengembalian dapat diajukan apabila produk yang diterima mengalami cacat atau rusak. Pembeli wajib menyertakan bukti foto atau video unboxing paket saat pertama kali dibuka.
+                    Jika produk yang Anda terima mengalami kerusakan produksi, kami menyediakan layanan retur dengan menyertakan dokumentasi video unboxing.
                 </p>
             </div>
 
@@ -372,9 +438,9 @@
                 <div class="h-12 w-12 rounded-2xl bg-rose-50 flex items-center justify-center">
                     <i data-lucide="heart-handshake" class="w-6 h-6 text-rose-500"></i>
                 </div>
-                <h3 class="font-display text-2xl font-semibold italic text-[#1C1915]">Layanan Tanggapan</h3>
+                <h3 class="font-display text-lg font-semibold text-[#1C1915] tracking-wider">Layanan Pelanggan</h3>
                 <p class="text-[#6B5E52] text-sm leading-relaxed">
-                    Setiap keluhan, masukan, maupun pertanyaan dari pembeli akan dilayani dengan ramah dan cepat melalui chat WhatsApp admin selama jam operasional kerja.
+                    Tim admin kami siap membantu memberikan solusi ramah dan responsif terkait pertanyaan produk dan pengiriman Anda.
                 </p>
             </div>
         </div>
@@ -385,20 +451,20 @@
 <section id="kontak" class="bg-white py-24 px-5 sm:px-8 border-t border-gray-150/30">
     <div class="max-w-7xl mx-auto">
         <div class="text-center max-w-2xl mx-auto mb-16 reveal">
-            <span class="section-eyebrow block mb-4">Lokasi & Kontak</span>
-            <h2 class="section-heading">Hubungi Hijab Pin House</h2>
-            <p class="section-subtext mt-4">Silakan hubungi kami untuk pemesanan, ketersediaan stok, atau info kemitraan.</p>
+            <span class="section-eyebrow block mb-4">Hubungi Kami</span>
+            <h2 class="section-heading">Mari Terhubung Lebih Dekat</h2>
+            <p class="section-subtext mt-4">Pintu komunikasi kami selalu terbuka untuk pertanyaan, kerja sama, maupun pemesanan khusus.</p>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
             <!-- Kiri: Kontak Usaha -->
             <div class="lg:col-span-5 reveal flex flex-col justify-between gap-6">
-                <div class="bg-[#FAF6F0] rounded-3xl p-8 border border-[#E8D5B0]/30 shadow-sm space-y-6 flex-grow">
-                    <h3 class="font-display text-2xl font-semibold italic text-[#1C1915] mb-4">Kontak Usaha</h3>
+                <div class="bg-[#FAF6F0] rounded-3xl p-8 border border-[#E8D5B0]/30 shadow-sm space-y-5 flex-grow">
+                    <h3 class="font-display text-2xl font-semibold text-[#1C1915] mb-4">Kontak Usaha</h3>
                     
                     <div class="flex items-start gap-4">
                         <div class="h-10 w-10 rounded-xl bg-[#C5A46B]/10 flex items-center justify-center shrink-0">
-                            <i data-lucide="message-square" class="w-5 h-5 text-[#C5A46B]"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-[#C5A46B]"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
                         </div>
                         <div>
                             <span class="block text-xs font-bold uppercase tracking-widest text-[#6B5E52]/60 mb-0.5">WhatsApp</span>
@@ -408,7 +474,7 @@
 
                     <div class="flex items-start gap-4">
                         <div class="h-10 w-10 rounded-xl bg-[#C5A46B]/10 flex items-center justify-center shrink-0">
-                            <i data-lucide="mail" class="w-5 h-5 text-[#C5A46B]"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-[#C5A46B]"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                         </div>
                         <div>
                             <span class="block text-xs font-bold uppercase tracking-widest text-[#6B5E52]/60 mb-0.5">Email</span>
@@ -418,11 +484,31 @@
 
                     <div class="flex items-start gap-4">
                         <div class="h-10 w-10 rounded-xl bg-[#C5A46B]/10 flex items-center justify-center shrink-0">
-                            <i data-lucide="instagram" class="w-5 h-5 text-[#C5A46B]"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-[#C5A46B]"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
                         </div>
                         <div>
                             <span class="block text-xs font-bold uppercase tracking-widest text-[#6B5E52]/60 mb-0.5">Instagram</span>
                             <a href="https://instagram.com/hijab_pin_house" target="_blank" class="text-base font-semibold text-[#1C1915] hover:text-[#C5A46B] transition-colors">@hijab_pin_house</a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="h-10 w-10 rounded-xl bg-[#C5A46B]/10 flex items-center justify-center shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-[#C5A46B]"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        </div>
+                        <div>
+                            <span class="block text-xs font-bold uppercase tracking-widest text-[#6B5E52]/60 mb-0.5">Facebook</span>
+                            <a href="https://facebook.com/hijabpinhouse" target="_blank" class="text-base font-semibold text-[#1C1915] hover:text-[#C5A46B] transition-colors">hijabpinhouse</a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="h-10 w-10 rounded-xl bg-[#C5A46B]/10 flex items-center justify-center shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-[#C5A46B]"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+                        </div>
+                        <div>
+                            <span class="block text-xs font-bold uppercase tracking-widest text-[#6B5E52]/60 mb-0.5">TikTok</span>
+                            <a href="https://www.tiktok.com/@hijabpinhouse_" target="_blank" class="text-base font-semibold text-[#1C1915] hover:text-[#C5A46B] transition-colors">@hijabpinhouse_</a>
                         </div>
                     </div>
                 </div>
@@ -432,7 +518,7 @@
             <div class="lg:col-span-7 reveal flex flex-col gap-6">
                 <div class="bg-[#FAF6F0] rounded-3xl p-8 border border-[#E8D5B0]/30 shadow-sm flex flex-col h-full gap-6">
                     <div class="space-y-2">
-                        <h3 class="font-display text-2xl font-semibold italic text-[#1C1915]">Alamat Offline</h3>
+                        <h3 class="font-display text-2xl font-semibold text-[#1C1915]">Alamat Offline</h3>
                         <p class="text-[#6B5E52] text-sm leading-relaxed flex items-start gap-2">
                             <i data-lucide="map-pin" class="w-4 h-4 text-[#C5A46B] mt-0.5 shrink-0"></i>
                             <span>Perumahan Taman Anugerah, Blok G7, Balai Gadang, Kec. Koto Tangah, Kota Padang, Sumatera Barat.</span>
@@ -461,9 +547,9 @@
 <section class="bg-[#1C1915] py-24 px-5 sm:px-8 relative overflow-hidden">
     <div class="blob w-80 h-80 bg-[#C5A46B] top-0 left-1/2 -translate-x-1/2" style="opacity:.12"></div>
     <div class="max-w-4xl mx-auto text-center relative z-10 space-y-8 reveal">
-        <span class="section-eyebrow block">Yuk, segera pesan!</span>
-        <h2 class="font-display text-4xl sm:text-5xl font-semibold italic text-white">Siap Sempurnakan Hijab Anda?</h2>
-        <p class="text-white/60 text-lg leading-relaxed max-w-xl mx-auto">Hubungi kami langsung via WhatsApp atau mulai belanja di toko online kami. Pengiriman ke seluruh Indonesia.</p>
+        <span class="section-eyebrow block">Koleksi Eksklusif</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-semibold text-white tracking-wide">Lengkapi Keanggunan Penampilan Anda</h2>
+        <p class="text-white/60 text-base leading-relaxed max-w-xl mx-auto">Pilih koleksi terbaik untuk kenyamanan aktivitas Anda atau konsultasikan pemesanan langsung bersama admin kami.</p>
         <div class="flex flex-wrap justify-center gap-4">
             <a href="https://wa.me/6283821102186" target="_blank"
                class="inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#1ebe5c] text-white font-semibold px-8 py-4 rounded-2xl text-base transition-all shadow-xl hover:scale-[1.02] btn-ring">
